@@ -1,0 +1,101 @@
+aid: columbia-banking
+name: Columbia Bank
+review:
+  question: Does Columbia Bank expose a public first-party developer API, and what is its US open-finance posture (developer portal, downloadable specs, FDX participation, CFPB 1033, aggregator access, auth model)?
+  answer: partial
+  date: '2026-07-23'
+  reviewer: API Evangelist
+findings:
+  summary: |
+    Columbia Bank (Oregon state-chartered commercial bank; principal subsidiary
+    of Columbia Banking System, Inc., NASDAQ: COLB; Tacoma, WA; formerly Umpqua
+    Bank, renamed Columbia Bank effective 2025-07-01; >$50B assets) runs a
+    genuine FIRST-PARTY API surface, but it is a commercial/treasury product,
+    not a self-serve public developer portal. "Columbia API Banking"
+    (https://www.columbiabank.com/commercial/api-banking/ and its
+    /developer-tools/ page) documents programmatic access to banking data and
+    operations for ERP and financial-software integration: book transfers, ACH
+    file imports, positive pay, stop-payment and NSF management, new account
+    requests, lockbox management, transaction and statement retrieval, check
+    images, and real-time account balances, with JSON and XML responses, a
+    production-ready SDK (source code + sample apps), and a gated "Columbia API
+    Portal" carrying full endpoint documentation and an event log for debugging.
+    No public OpenAPI/Swagger specification was located and none was harvested;
+    the technical reference lives behind the gated portal. No public developer
+    subdomain resolves. The published material does not state the authentication
+    model (OAuth2/API-key/mTLS), so no auth claim is made here. Consumer-
+    permissioned data access is provided via the Plaid aggregator rather than a
+    first-party consumer API. No documented FDX participation and no published
+    CFPB Section 1033 data-access posture were found at bootstrap time.
+  firstPartyDeveloperPortal: true
+  publicSelfServeSignup: false
+  developerPortalURL: https://www.columbiabank.com/commercial/api-banking/
+  developerToolsURL: https://www.columbiabank.com/commercial/api-banking/developer-tools/
+  openApiDownloadable: false
+  specProvenance: none
+  authModel: undocumented
+  fdxParticipant: false
+  cfpb1033Posture: none
+  aggregatorAccess:
+    - Plaid
+  dataFormats:
+    - JSON
+    - XML
+  documentedCapabilities:
+    - Book transfers
+    - ACH file imports
+    - Positive pay
+    - Stop-payment management
+    - NSF management
+    - New account requests
+    - Lockbox management
+    - Transaction search
+    - Statement retrieval
+    - Check images
+    - Real-time account balances
+  transports:
+    - protocol: REST
+      scheme: https
+      documented: true
+      note: >-
+        Columbia API Banking is described as a REST-style API returning JSON and
+        XML. No public base URL is published; endpoint reference is gated behind
+        the Columbia API Portal, so no base URL is asserted here.
+  probes:
+    - url: https://www.columbiabank.com/commercial/api-banking/
+      status: 403
+      note: Live docs page exists (indexed) but returns Cloudflare bot challenge (HTTP 403) to automated fetch; not verified via a live 200.
+    - url: https://www.columbiabank.com/commercial/api-banking/developer-tools/
+      status: 403
+      note: Developer Tools page exists but returns HTTP 403 Cloudflare challenge to automated fetch.
+    - url: https://developer.columbiabank.com/
+      status: 0
+      note: Does not resolve (no DNS) — no dedicated developer subdomain.
+    - url: https://api.columbiabank.com/
+      status: 503
+      note: Host responds but returns 503; no public API surface exposed here.
+sources:
+  - url: https://www.columbiabank.com/commercial/api-banking/
+    type: Documentation
+    note: Columbia API Banking overview — capabilities, JSON/XML, SDK, treasury/ERP integration.
+  - url: https://www.columbiabank.com/commercial/api-banking/developer-tools/
+    type: Documentation
+    note: Developer Tools — production-ready SDK with source code, sample apps, Columbia API Portal documentation and event log.
+  - url: https://www.openbankingtracker.com/provider/columbia-bank-business-personal
+    type: Reference
+    note: No first-party consumer API/developer portal listed; supported by one aggregator (Plaid).
+  - url: https://www.columbiabank.com/globalassets/media/documents/columbia_bank_dba_umpqua_bank.pdf
+    type: Reference
+    note: Umpqua Bank legal name changed to Columbia Bank, an Oregon state-chartered commercial bank, effective 2025-07-01.
+  - url: https://www.prnewswire.com/news-releases/columbia-banking-system-and-umpqua-holdings-corporation-complete-merger-301758616.html
+    type: Reference
+    note: 2023 merger of Columbia Banking System and Umpqua Holdings Corporation; parent Columbia Banking System, Inc., HQ Tacoma WA.
+actions:
+  apisYmlCreated: true
+  openapiHarvested: false
+  reason: |
+    A real first-party commercial API (Columbia API Banking) is documented and
+    recorded as a single apis[] entry with its live docs and developer-tools
+    pages. No public OpenAPI/Swagger was available to harvest, so openapi/ is
+    empty. Aggregator-only (Plaid) consumer access, absent FDX/1033 posture, and
+    the undocumented auth model are recorded honestly rather than invented.
