@@ -1,0 +1,20 @@
+# Columbia Bank
+
+> Columbia Bank is an Oregon state-chartered commercial bank and the principal banking subsidiary of Columbia Banking System, Inc. (NASDAQ: COLB), a West Coast regional bank holding company headquartered in Tacoma, Washington with more than $50 billion in assets. It adopted the legal name "Columbia Bank" on July 1, 2025, having previously operated as Umpqua Bank following the 2023 Columbia/Umpqua merger. Columbia runs a first-party commercial developer surface — Columbia API Banking — plus consumer-permissioned data access delivered through the Plaid aggregator.
+
+## APIs
+
+- [Columbia API Banking](https://www.columbiabank.com/commercial/api-banking/): First-party commercial and treasury-management API product. Documented capabilities: book transfers, ACH file imports, positive pay, stop-payment and NSF management, new account requests, lockbox management, transaction and statement retrieval, check images, and real-time account balances. Responses in JSON and XML. A production-ready SDK and the gated Columbia API Portal provide the technical reference and an event log for debugging. No public OpenAPI/Swagger specification or public base URL is published; the technical reference lives behind the gated portal.
+
+## Docs
+
+- [API Banking overview](https://www.columbiabank.com/commercial/api-banking/): Product landing page for Columbia API Banking.
+- [Developer tools](https://www.columbiabank.com/commercial/api-banking/developer-tools/): SDK, sample apps, and Columbia API Portal access.
+- [Help center](https://www.columbiabank.com/help-center/): Customer and client support.
+- [Blog](https://www.columbiabank.com/blog/): Company and product updates.
+
+## Notes
+
+- Access model: Columbia API Banking is a gated, commercial/ERP-oriented integration product (not a self-serve public developer portal). Technical documentation and credentials are provisioned through the Columbia API Portal.
+- Consumer open-finance access is delivered via the Plaid aggregator rather than a first-party FDX endpoint. No documented FDX participation or published CFPB Section 1033 posture was found.
+- No public machine-readable contract (OpenAPI/Swagger/GraphQL/AsyncAPI), package registries, or /.well-known discovery documents were found on public hosts as of 2026-07-23.

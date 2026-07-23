@@ -30,7 +30,7 @@ tags:
 - Open Finance
 - Data Aggregation
 created: '2026-07-23'
-modified: '2026-07-23'
+modified: '2026-07-24'
 specificationVersion: '0.19'
 apis:
 - aid: columbia-banking:columbia-api-banking
@@ -59,6 +59,12 @@ apis:
   - type: Documentation
     url: https://www.columbiabank.com/commercial/api-banking/developer-tools/
 common:
+- type: DomainSecurity
+  url: security/columbia-banking-domain-security.yml
+- type: LLMsTxt
+  url: llms/columbia-banking-llms.txt
+- type: DeveloperPortal
+  url: https://www.columbiabank.com/commercial/api-banking/
 - type: Website
   url: https://www.columbiabank.com/
 - type: Documentation
