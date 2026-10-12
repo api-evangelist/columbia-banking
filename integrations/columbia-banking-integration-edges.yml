@@ -1,0 +1,18 @@
+generated: '2026-10-12'
+method: none
+source:
+- https://zapier.com/apps/columbia-banking/integrations
+- https://zapier.com/apps/columbia-bank/integrations
+- https://n8n.io/integrations/columbia-banking/
+- https://composio.dev/toolkits/columbia-banking
+- https://monid.ai/tools/columbia-banking
+checked:
+- https://composio.dev/toolkits/columbia-banking
+- https://monid.ai/tools/columbia-banking
+- https://n8n.io/integrations/columbia-banking/
+- https://zapier.com/apps/columbia-bank/integrations
+- https://zapier.com/apps/columbia-banking/integrations
+summary: null
+marketplace_apps: []
+edges: []
+templates: []
