@@ -1,4 +1,4 @@
-# Columbia Bank (columbia-banking)
+# Columbia Bank
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,61 +64,86 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Columbia Bank is an Oregon state-chartered commercial bank and the principal banking subsidiary of Columbia Banking System, Inc. (NASDAQ: COLB), a West Coast regional bank holding company headquartered in Tacoma, Washington with more than $50 billion in assets. The bank adopted the legal name "Columbia Bank" effective July 1, 2025, having operated as Umpqua Bank after the 2023 merger of Columbia Banking System and Umpqua Holdings Corporation.
+Columbia Bank is an Oregon state-chartered commercial bank and the principal banking subsidiary of Columbia Banking System, Inc. (NASDAQ: COLB), a West Coast regional bank holding company headquartered in Tacoma, Washington with more than $50 billion in assets. The bank took the legal name "Columbia Bank" effective July 1, 2025, having previously operated as Umpqua Bank following the 2023 merger of Columbia Banking System and Umpqua Holdings Corporation. On the open-finance front, Columbia is one of the relatively few US regional banks to run a first-party developer surface: Columbia API Banking, a commercial and treasury-management integration product exposing capabilities such as book transfers, ACH file imports, positive pay, stop-payment and NSF management, lockbox management, transaction and statement search, check images, and real-time account balances in JSON and XML, backed by a production-ready SDK and the gated Columbia API Portal. That surface is commercial/ERP-oriented rather than a self-serve public developer portal, and consumer-permissioned data access is instead delivered through the Plaid aggregator. No documented FDX participation or published CFPB Section 1033 posture was found.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/columbia-banking/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/columbia-banking/refs/heads/main/apis.yml)
+**Areas:** Financial Services · Banking · United States · Regional Bank · Commercial Banking · Treasury Management · Open Finance
 
-## Open-Finance & API Posture
+## Columbia Bank on APIs.io
 
-Columbia is one of the relatively few US regional banks to run a first-party developer surface. **Columbia API Banking** is a commercial and treasury-management integration product that exposes banking data and operations for direct integration with financial software and ERP systems. Documented capabilities include book transfers, ACH file imports, positive pay, stop-payment and NSF management, new account requests, lockbox management, transaction and statement retrieval, check images, and real-time account balances, with responses available in JSON and XML. A production-ready SDK and the gated Columbia API Portal provide reference documentation and an event log for debugging.
+Everything profiled for Columbia Bank is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/columbia-banking/](https://apis.io/providers/columbia-banking/)** — or go straight to one of the APIs or properties below.
 
-This is a commercial/ERP-oriented surface rather than a self-serve public developer portal — there is no publicly resolving `developer.columbiabank.com`, and the API reference lives behind the Columbia API Portal. No public OpenAPI/Swagger specification was found to harvest. Consumer-permissioned data access is delivered through the **Plaid** aggregator rather than a first-party consumer API. No documented **FDX** participation or published **CFPB Section 1033** data-access posture was found at bootstrap time.
+### APIs (1)
 
-## Tags
+- [Columbia API Banking](https://apis.io/apis/columbia-banking/columbia-api-banking/) — First-party commercial and treasury-management API product from Columbia Bank, providing programmatic access to banking data and operations for integration…
 
-- Financial Services
-- Banking
-- United States
-- Regional Bank
-- Commercial Banking
-- Treasury Management
-- Open Finance
-- Data Aggregation
+### Published properties
 
-## Timestamps
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-- **Created:** 2026-07-23
-- **Modified:** 2026-07-23
+#### Security (1)
 
-## APIs
+Authentication, trust centre, and vulnerability disclosure.
 
-### Columbia API Banking
+- [Columbia Banking Domain Security](https://apis.io/security/columbia-banking/columbia-banking-domain-security/)
 
-First-party commercial and treasury-management API product providing programmatic access to banking data and operations for integration with financial software and ERP platforms.
+## Where to find this API
 
-- **Human URL:** [https://www.columbiabank.com/commercial/api-banking/](https://www.columbiabank.com/commercial/api-banking/)
-
-#### Tags
-
-- Commercial Banking
-- Treasury Management
-- Payments
-- ACH
-
-#### Properties
-
-- [Documentation](https://www.columbiabank.com/commercial/api-banking/)
-- [Documentation — Developer Tools](https://www.columbiabank.com/commercial/api-banking/developer-tools/)
-
-## Common Properties
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://www.columbiabank.com/)
 - [Documentation](https://www.columbiabank.com/commercial/api-banking/)
-- [Blog](https://www.columbiabank.com/blog/)
 - [Support](https://www.columbiabank.com/help-center/)
-- [LinkedIn](https://www.linkedin.com/company/umpqua-bank)
+- [Blog](https://www.columbiabank.com/blog/)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 9.3** — minimal · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 64.3 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 26.2 |
+| Access clarity | 0.0 |
+
+**Agent readiness 0.0** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 4.7** — Banking & Open Finance
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/columbia-banking/](https://apis.io/providers/columbia-banking/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Columbia Bank: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/columbia-banking/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
